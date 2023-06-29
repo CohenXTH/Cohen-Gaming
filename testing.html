@@ -6,10 +6,16 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
+      background-image: url('bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     
     h1 {
-      color: #333;
+      color: #86d10c;
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     
     .game-container {
@@ -25,14 +31,16 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 200px;
-      height: 250px;
-      background-color: lightblue;
+      width: 45%;
+      max-width: 300px;
+      height: auto;
       margin: 10px;
       padding: 20px;
       border-radius: 10px;
       cursor: pointer;
       transition: transform 0.3s ease-in-out;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
     }
     
     .animal-card:hover {
@@ -40,8 +48,9 @@
     }
     
     .animal-card img {
-      width: 150px;
-      height: 150px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       margin-bottom: 10px;
     }
     
@@ -49,7 +58,14 @@
       font-size: 18px;
       font-weight: bold;
     }
+    
+    @media screen and (max-width: 600px) {
+      .animal-card {
+        width: 90%;
+      }
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1>Animal Sounds Game</h1>
